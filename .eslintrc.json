@@ -1,0 +1,65 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "extends": [
+        "plugin:vue/essential",
+        "google"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "vue",
+        "vuetify"
+    ],
+    "rules": {
+        "vuetify/grid-unknown-attributes": "error",
+        "vuetify/no-legacy-grid": "error",
+        "indent": ["error", 4],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "no-invalid-this": 0,
+        "require-jsdoc" : 0,
+        "valid-jsdoc": 0,
+        "camelcase": 0,
+        "new-cap": 0,
+        /*"valid-jsdoc": [
+            2, {
+                "requireReturn": false,
+                "requireParamDescription": false,
+                "requireReturnDescription": false,
+                "requireReturnType": false,
+                "requireParamType": false
+            }
+        ],*/
+        "object-curly-spacing": [2, "always"],
+        "quotes": [
+            "error"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+
+        /*
+        * used 120 and enforced for: platform, dialysis, core, & users,
+        * got to evaluation and got tired
+        */
+        "max-len" : [
+            "error", { "code": 200 }
+        ],
+        "no-empty": 0,
+        "no-unused-vars": 0,
+        "no-undef": 0,
+        "vuetify/no-deprecated-classes": "error"
+    }
+}

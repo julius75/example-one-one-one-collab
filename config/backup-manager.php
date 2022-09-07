@@ -1,0 +1,60 @@
+<?php
+
+return [
+    'local' => [
+        'type' => env("BACKUP_POINT_TYPE"),
+        'root' => env("BACKUP_POINT_ROOT"),
+    ],
+    's3' => [
+        'type' => env("BACKUP_POINT_TYPE"),
+        'key' => env("BACKUP_POINT_KEY"),
+        'secret' => env("BACKUP_POINT_SECRET"),
+        'region' => 'us-east-1',
+        'bucket' => '',
+        'root' => env("BACKUP_POINT_ROOT"),
+    ],
+    'gcs' => [
+        'type' => env("BACKUP_POINT_TYPE"),
+        'key' => env("BACKUP_POINT_KEY"),
+        'secret' => env("BACKUP_POINT_SECRET"),
+        'bucket' => '',
+        'root' => env("BACKUP_POINT_ROOT"),
+    ],
+    'rackspace' => [
+        'type' => env("BACKUP_POINT_TYPE"),
+        'username' => env("BACKUP_POINT_USERNAME"),
+        'key' => env("BACKUP_POINT_KEY"),
+        'container' => '',
+        'zone' => '',
+        'endpoint' => 'https://identity.api.rackspacecloud.com/v2.0/',
+        'root' => env("BACKUP_POINT_ROOT"),
+    ],
+    'dropbox' => [
+        'type' => env("BACKUP_POINT_TYPE"),
+        'token' => env("BACKUP_POINT_TOKEN"),
+        'key' => env("BACKUP_POINT_KEY"),
+        'secret' => env("BACKUP_POINT_SECRET"),
+        'app' => env("BACKUP_POINT_APP"),
+        'root' => env("BACKUP_POINT_ROOT"),
+    ],
+    'ftp' => [
+        'type' => env("BACKUP_POINT_TYPE"),
+        'host' => env("BACKUP_POINT_HOST"),
+        'username' => env("BACKUP_POINT_USERNAME"),
+        'password' => env("BACKUP_POINT_PASSWORD"),
+        'port' => 21,
+        'passive' => true,
+        'ssl' => true,
+        'timeout' => 30,
+        'root' => env("BACKUP_POINT_ROOT"),
+    ],
+    'sftp' => [
+        'type' => env("BACKUP_POINT_TYPE"),
+        'host' => 'collabmed.net',
+        'username' => 'root',
+        'password' => 'new23west',
+        'port' => 22,
+        'timeout' => 10,
+        'root' => env("BACKUP_POINT_ROOT"),
+    ],
+];
